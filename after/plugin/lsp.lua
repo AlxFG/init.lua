@@ -6,7 +6,6 @@ lsp.ensure_installed({
   'tsserver',
   'sumneko_lua',
   'rust_analyzer',
-  'clangd',
 })
 
 -- Fix Undefined global 'vim'
@@ -20,22 +19,23 @@ lsp.configure('sumneko_lua', {
     }
 })
 
+lsp.skip_server_setup({'clangd'})
 
---local cmp = require('cmp')
---local cmp_select = {behavior = cmp.SelectBehavior.Select}
---local cmp_mappings = lsp.defaults.cmp_mappings({
---  ['<M-p>'] = cmp.mapping.select_prev_item(cmp_select),
---  ['<M-n>'] = cmp.mapping.select_next_item(cmp_select),
---  ['<M-y>'] = cmp.mapping.confirm({ select = true }),
---  ["<M-Space>"] = cmp.mapping.complete(),
---})
---
---cmp_mappings['<Tab>'] = nil
---cmp_mappings['<S-Tab>'] = nil
---
---lsp.setup_nvim_cmp({
---  mapping = cmp_mappings
---})
+local cmp = require('cmp')
+local cmp_select = {behavior = cmp.SelectBehavior.Select}
+local cmp_mappings = lsp.defaults.cmp_mappings({
+  ['<M-p>'] = cmp.mapping.select_prev_item(cmp_select),
+  ['<M-n>'] = cmp.mapping.select_next_item(cmp_select),
+  ['<M-y>'] = cmp.mapping.confirm({ select = true }),
+  ["<M-Space>"] = cmp.mapping.complete(),
+})
+
+cmp_mappings['<Tab>'] = nil
+cmp_mappings['<S-Tab>'] = nil
+
+lsp.setup_nvim_cmp({
+  mapping = cmp_mappings
+})
 
 lsp.set_preferences({
     suggest_lsp_servers = false,
