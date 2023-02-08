@@ -1,2 +1,1 @@
-require('lspconfig').clangd.setup{}
-require("clangd_extensions").setup{}
+require("inlay-hints").setup()

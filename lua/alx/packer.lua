@@ -49,4 +49,5 @@ return require('packer').startup(function(use)
  	 }
 }
     use('https://git.sr.ht/~p00f/clangd_extensions.nvim')
+    use('simrat39/inlay-hints.nvim')
 end)

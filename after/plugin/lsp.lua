@@ -6,6 +6,7 @@ lsp.ensure_installed({
   'tsserver',
   'sumneko_lua',
   'rust_analyzer',
+  'clangd',
 })
 
 -- Fix Undefined global 'vim'
@@ -18,8 +19,6 @@ lsp.configure('sumneko_lua', {
         }
     }
 })
-
-lsp.skip_server_setup({'clangd'})
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
