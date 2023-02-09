@@ -19,7 +19,7 @@ lsp.configure('sumneko_lua', {
         }
     }
 })
-
+lsp.skip_server_setup({'clangd'})
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -68,3 +68,5 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
+local c_lsp = lsp.build_options('clangd', {})
+require('clangd_extensions').setup({server = c_lsp})
