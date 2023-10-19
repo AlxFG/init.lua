@@ -1,1 +1,1 @@
-require("alx")
+require("config")
