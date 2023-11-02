@@ -30,6 +30,7 @@ require('lazy').setup({
         end,
         lazy = false,
     },
+    {
         "neanias/everforest-nvim",
         priority = 1000,
         config = function()
@@ -37,6 +38,7 @@ require('lazy').setup({
             vim.cmd("colorscheme everforest")
         end,
         lazy = false,
+    },
     {
         "nvim-treesitter/nvim-treesitter",
         build = ':TSUpdate',
