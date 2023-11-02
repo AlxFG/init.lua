@@ -23,6 +23,21 @@ require('lazy').setup({
         lazy = false,
     },
     {
+        "eemed/sitruuna.vim",
+        priority = 1000,
+        config = function()
+            vim.cmd("colorscheme sitruuna")
+        end,
+        lazy = false,
+    },
+        "neanias/everforest-nvim",
+        priority = 1000,
+        config = function()
+            vim.cmd("set background=light")
+            vim.cmd("colorscheme everforest")
+        end,
+        lazy = false,
+    {
         "nvim-treesitter/nvim-treesitter",
         build = ':TSUpdate',
         priority = 999,
