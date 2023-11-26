@@ -62,7 +62,19 @@ require('lazy').setup({
         lazy = false,
     },
     -- use ("hrsh7th/cmp-nvim-lsp")
+    {
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
+      priority = 130,
+      lazy = false,
+      dependencies = { 'nvim-lua/plenary.nvim' },
+    },
     { 'echasnovski/mini.nvim', version = 'false' },
     "saccarosium/neomarks",
+    {
+        "nvim-neorg/neorg",
+        build = ":Neorg sync-parsers",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        lazy = true,
+    },
 })
 

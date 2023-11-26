@@ -1,3 +1,4 @@
+local lspconfig = require('lspconfig')
 require('mason').setup()
 
 require('mason-lspconfig').setup({
@@ -24,7 +25,7 @@ local lsp_attach = function(client, bufnr)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end
 
-local lspconfig = require('lspconfig')
+
 require('mason-lspconfig').setup_handlers({
   function(server_name)
     lspconfig[server_name].setup({
@@ -33,3 +34,12 @@ require('mason-lspconfig').setup_handlers({
     })
   end,
 })
+
+lspconfig.zls.setup {
+    settings = {
+        ['zls'] = {
+            enable_autofix = false,
+            enable_inlay_hints = false,
+        }
+    }
+}
