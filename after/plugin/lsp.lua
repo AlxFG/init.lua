@@ -36,6 +36,7 @@ require('mason-lspconfig').setup_handlers({
 })
 
 lspconfig.zls.setup {
+    on_attach = lsp_attach,
     settings = {
         ['zls'] = {
             enable_autofix = false,
