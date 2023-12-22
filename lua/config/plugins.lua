@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- vim.cmd [[packadd packer.nvim]]
 
-require('lazy').setup({
+require("lazy").setup({
     {
         "bluz71/vim-moonfly-colors",
         priority = 1000,
@@ -41,7 +41,7 @@ require('lazy').setup({
     },
     {
         "nvim-treesitter/nvim-treesitter",
-        build = ':TSUpdate',
+        build = ":TSUpdate",
         priority = 999,
         lazy = false,
     },
@@ -63,12 +63,12 @@ require('lazy').setup({
     },
     -- use ("hrsh7th/cmp-nvim-lsp")
     {
-    'nvim-telescope/telescope.nvim', tag = '0.1.4',
+    "nvim-telescope/telescope.nvim", tag = "0.1.4",
       priority = 130,
       lazy = false,
-      dependencies = { 'nvim-lua/plenary.nvim' },
+      dependencies = { "nvim-lua/plenary.nvim" },
     },
-    { 'echasnovski/mini.nvim', version = 'false' },
+    { "echasnovski/mini.nvim", version = "false" },
     "saccarosium/neomarks",
     {
         "nvim-neorg/neorg",

@@ -3,7 +3,7 @@ require("config.remap")
 require("config.plugins")
 
 local augroup = vim.api.nvim_create_augroup
-local AlxGroup = augroup('alx', {})
+local AlxGroup = augroup("alx", {})
 
 local autocmd = vim.api.nvim_create_autocmd
 autocmd({"BufWritePre"}, {

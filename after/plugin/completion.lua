@@ -5,7 +5,7 @@ require("mini.completion").setup({
     -- - `height` and `width` are maximum dimensions.
     -- - `border` defines border (as in `nvim_open_win()`).
     window = {
-        info = { height = 25, width = 80, border = 'single' },
-        signature = { height = 25, width = 80, border = 'single' },
+        info = { height = 25, width = 80, border = "single" },
+        signature = { height = 25, width = 80, border = "single" },
     }
 })

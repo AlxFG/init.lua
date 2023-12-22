@@ -1,15 +1,15 @@
-local lspconfig = require('lspconfig')
-require('mason').setup()
+local lspconfig = require("lspconfig")
+require("mason").setup()
 
-require('mason-lspconfig').setup({
+require("mason-lspconfig").setup({
   ensure_installed = {
     -- Replace these with whatever servers you want to install
-    'clangd',
-    'zls',
+    "clangd",
+    "zls",
   }
 })
 
---local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+--local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lsp_attach = function(client, bufnr)
     local opts = {buffer = bufnr, remap = false}
 
@@ -26,7 +26,7 @@ local lsp_attach = function(client, bufnr)
 end
 
 
-require('mason-lspconfig').setup_handlers({
+require("mason-lspconfig").setup_handlers({
   function(server_name)
     lspconfig[server_name].setup({
       on_attach = lsp_attach,
@@ -38,7 +38,7 @@ require('mason-lspconfig').setup_handlers({
 lspconfig.zls.setup {
     on_attach = lsp_attach,
     settings = {
-        ['zls'] = {
+        ["zls"] = {
             enable_autofix = false,
             enable_inlay_hints = false,
         }

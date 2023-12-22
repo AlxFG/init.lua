@@ -1,6 +1,6 @@
 marks = require("neomarks")
 marks.setup({
-    storagefile = vim.fn.stdpath('data') .. "/neomarks.json",
+    storagefile = vim.fn.stdpath("data") .. "/neomarks.json",
     menu = {
         title = "Marks",
         title_pos = "center",
